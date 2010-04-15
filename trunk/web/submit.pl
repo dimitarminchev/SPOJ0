@@ -53,10 +53,14 @@ sub print_form {
         				-labels=>\%LANGUAGES, 
         				-default=>$language)),
 
-        		td({-align=>'right'}, "upload file:").
-        			td({-align=>'left'}, filefield(-name=>'upload',-size=>60)),
+        		td({-align=>'right'}, "Note:").
+        			td({-align=>'left'}, "If you are using java, your class should be named 'program' (lowercase)!"),
+
+# Disabling the file upload since it's causing troubles
+#        		td({-align=>'right'}, "upload file:").
+#        			td({-align=>'left'}, filefield(-name=>'upload',-size=>60)),
         			
-        		td({-align=>'right'}, "or paste code:").
+        		td({-align=>'right'}, "paste code:").
         			td({-align=>'left'}, textarea(-name=>'paste_code', 
         				-default=>param('paste_code') || "", -rows=>25, -columns=>80)),
         			

@@ -46,7 +46,7 @@ sub PrintForm {
 			(There is no need to register for individual contests.)
 		</p>
 		<p>
-			<strong>Warning</strong>, before registering keep the folowing things in mind.
+			<strong>Warning:</strong> Before registering keep the folowing things in mind:
 			<ul>
 				<li>You have to enter valid user data.</li>
 				<li>You may use cyrillic (or other unicode) for the displayed info (such as names).</li>
