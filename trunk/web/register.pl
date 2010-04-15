@@ -39,20 +39,23 @@ sub PrintForm {
 	
 	print qq(
 		<p>
-			Поради големия брой потребители които трябваше да регистрирам ръчно, се предадох и направих тази форма. Ако някой не е регистриран и иска да участва в състезанията, нека го направи от тук. Регистриран потребител може да участва във всички състезания (не е необходима регистрация за отделни състезания или нещо такова).
+			Due to the large number of users that we had to register manually,
+			we finally gave up and made this form. Everyone is now allowed to
+			register and participate in the contests of the system.
+			After you register you can participate in any contest of the system. 
+			(There is no need to register for individual contests.)
 		</p>
 		<p>
-			<strong>Внимание!</strong>, ако искате да се регистрирате, имайте предвид следните неща:
+			<strong>Warning</strong>, before registering keep the folowing things in mind.
 			<ul>
-				<li>Трябва да попълните валидни данни.</li>
-				<li>Препоръчва се кирилица за данните (за които е адекватно разбира се).</li>
-				<li>Паролата не е необходимо да е много силна.</li>
-				<li>Регистрацията се прави само веднъж, така че бих бил благодарен ако попълните валидни и пълни данни.</li>
-				<li>Потребители, които администриращите сметнат за нереални ще бъдат деактивирани.</li>
-				<li>Ако вашият акаунт бъде деактивиран, свържете се с администратор за да се разреши проблема.</li>
-				<li>Системата е далеч от перфектна, и бих бил много благодарен да не злоупотребявате с нея, и да алармирате за видяни проблеми.</li>
-				<li>От долните полете попълнете тези които са смислени за вас.</li>
-				<li>Задължително е да оставите някакъв контакт.</li>
+				<li>You have to enter valid user data.</li>
+				<li>You may use cyrillic (or other unicode) for the displayed info (such as names).</li>
+				<li>Because of the current security implementation you don't need to use a strong password.</li>
+				<li>Registration is performed only once, so please fill in valid data. You will not be able to update the data later.</li>
+				<li>Users that do not look like real users will be removed.</li>
+				<li>The system is mostly protype quality, so please do not abuse it and report problems you discover.</li>
+				<li>From the fields below, fill those which are appropriate for you.</li>
+				<li>It is required to enter at least one contact informaction.</li>
 			</ul>
 		</p>
 
@@ -63,19 +66,19 @@ sub PrintForm {
 			{'-border'=>0},
         	undef,
         	Tr({-align=>'center'}, [
-				Field("Потребителско име:", 'name'),
+				Field("Username:", 'name'),
         		
-        		td({-align=>'right'}, "Парола:").
+        		td({-align=>'right'}, "Password:").
         			td({-align=>'left'}, password_field('password', param('password'))),
         		
-				Field("Пълно име (поне две имена):", "display_name"),
-				Field("Град:", "city"),
-				Field("Учебно Заведение/Организация:", "inst"),
-				Field("Факултетен Номер (ако е приложимо):", "fn"),
+				Field("Full name (e.g. first and last name):", "display_name"),
+				Field("Country/City:", "city"),
+				Field("School/Organization:", "inst"),
+				Field("Faculty number (if applicable):", "fn"),
 				Field("email:", "email"),
 				Field("icq:", "icq"),
 				Field("skype:", "skype"),
-				Field("друго (друго интересно):", "other"),
+				Field("other (contact, notes, etc.):", "other"),
         			
         		td({-align=>'center'}, submit(-label=>'Submit')).
         			td({-align=>'left'}, "")
@@ -93,10 +96,10 @@ sub SubmitForm{
 	
 	#TODO: no check for duplicates!!! (not concurent safe)
 	if(Login($dbh, param('name'), param('password'))){
-		$error = "Вече има такъв потребител!";
+		$error = "Username is already registered!";
 	}
 	elsif(length(param('display_name')) < 5){
-		$error = "Не сте въвели пълно име!";
+		$error = "You have not entered full name!";
 	}
 	else{
 		my %user_data = (
@@ -113,7 +116,7 @@ sub SubmitForm{
 		$user_data{'about'} .= " skype:".param('skype') if(param('skype'));
 		$user_data{'about'} .= " other:".param('other') if(param('other'));
 		$r = RegisterUser $dbh, \%user_data;
-		$r or $error = "Грешка (някаква)";
+		$r or $error = "Error (some)";
 	}
 	print p(strong($error));
 	return $r;

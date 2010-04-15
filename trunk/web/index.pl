@@ -23,16 +23,7 @@ print header(-charset=>'utf-8'),
 			administrator.
 		</p>
 		<p>
-			Стига сте джиткали с тестовите потребители. Който иска да се включи, 
-			да ми прати потребителско име, парола, пълно име, и about (учебно заведение, 
-			fn ако е от фми или каквото друго прецени). Всички състезания са отворени за 
-			всички регистрирани.
-		</p>
-		<p>
-			Гледайте и пишете в <a 
-				href="http://judge.openfmi.net/wiki/index.php/Spoj0"
-			>http://judge.openfmi.net/wiki/index.php/Spoj0</a> за разни хубави неща...
-				
+			The source code of the system is available at <a href="http://code.google.com/p/spoj0/">http://code.google.com/p/spoj0/</a>
 		</p>
 	^;
 	

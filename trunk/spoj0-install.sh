@@ -1,5 +1,5 @@
 #!/bin/bash -verbose
-
+SPOJ0_SVN_URL=http://spoj0.googlecode.com/svn/trunk/
 
 pause() {
 	echo "If everything is ok, press enter, otherwise cancel it with ctlr+c..."
@@ -25,7 +25,7 @@ echo "stopping if old deamon is running"
 ./spoj0-control.pl stop
 
 echo "note that this creates working svn version of the system, so you can submit changes back"
-svn checkout svn://milo0.no-ip.org/spoj0 .
+svn checkout $SPOJ0_SVN_URL .
 #mkdir public_html
 #ln -s /home/spoj0/web public_html
 
