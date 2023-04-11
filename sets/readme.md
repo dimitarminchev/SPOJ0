@@ -6,7 +6,7 @@ This folder contains contest set sample folder and files structure of 1 contest 
 
 ## Donwload 
 - [test.zip](test.zip)
-- [test.samples.zip](test.zip)
+- [test.samples.zip](test.samples.zip)
 
 ## Content
 ```
