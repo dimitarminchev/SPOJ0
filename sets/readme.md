@@ -1,14 +1,14 @@
-# Contest Set Sample
+## Contest Set Sample
 This folder contains contest set sample folder and files structure of 1 contest with 2 tasks.
 
-## Preview
-![test.png](test.png)
-
-## Donwload 
+### Download 
 - [test.zip](test.zip)
 - [test.samples.zip](test.samples.zip)
 
-## Content
+### Preview
+![test.png](test.png)
+
+### Content
 ```
 sets
 ├── test.samples
