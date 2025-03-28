@@ -19,8 +19,3 @@ sudo ./spoj0-install.sh
 - gcc 12.2.0
 - javac 11.0.18
 - mono 6.8.0.105
-
-## Credits
-- Original web interface is written on PERL by Milo Sredkov, E-mail: <milo@milosredkov.com>  
-- Brand new web interface is written on PHP by Dimitar Minchev, E-mail: <dimitar.minchev@gmail.com>, Blog: [minchev.eu](http://www.minchev.eu/)
-- Contestation (Questions and Answers) by Ivo Kamenarov, E-mail: <ikk@ami.uni-ruse.bg>
