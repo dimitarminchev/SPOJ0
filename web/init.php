@@ -21,7 +21,7 @@ $STATUS_PE = 'pe'; // presentation error (difference in whitespaces)
 $STATUS_RE = 're'; // runtime error
 
 // Google ReCaptcha Api key
-$RECAPTCHA_KEY = "6LdyQHIUAAAAAGz2PsKIRYvySigLuxGz5K0HpCA3";
+$RECAPTCHA_KEY = "6LcaAtwqAAAAAJnqBrJjTL2zvf310yapBvb1lx18";
 
 /* MySQL */
 // Creditentials
