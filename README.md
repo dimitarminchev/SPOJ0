@@ -7,6 +7,10 @@ Simple Programming Contests Online Judge System.
 ```
 git clone https://github.com/dimitarminchev/spoj0.git
 cd spoj0
+sudo chmod 755 spoj0-install.sh
+sudo chmod 755 spoj0-control.pl
+sudo chmod 755 spoj0-daemon.pl
+sudo chmod 755 spoj0-grade.pl
 sudo ./spoj0-install.sh
 ```
 ### Versions
