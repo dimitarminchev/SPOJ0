@@ -101,8 +101,8 @@ CREATE TABLE `news` (
 
 LOCK TABLES `news` WRITE;
 INSERT INTO `news` (`new_id`, `new_time`, `file`, `topic`, `content`) VALUES
-(1, '2013-10-01 10:00:00', '', 'Информация', 'SPOJ е електронна тренировъчна система за автоматично оценяване на задачи по програмиране, разработена от Мило Средков и налична за изтегляне в <a target="_blank" href="http://code.google.com/p/spoj0/">Google Code</a>.'),
-(2, '2016-12-23 19:30:00', '', 'Актуализация', 'Актуализираната версия на SPOJ е разработена от <a target="_blank" href="http://www.minchev.eu">Димитър Минчев</a> и е налична за изтегляне в <a target="_blank" href="https://github.com/dimitarminchev/spoj0/">GitHub</a>, повече информация за обновленията вижте <a target="_blank" href="http://www.minchev.eu/spoj-update/">тук</a>. ');
+(1, '2013-10-01 10:00:00', '', 'Information', 'Simple Programming Contests Online Judge System, developed by Milo Sredkov and available for download from <a target="_blank" href="http://code.google.com/p/spoj0/">Google Code</a>.'),
+(2, '2016-12-23 19:30:00', '', 'Update', 'Updated version of SPOJ is developed by <a target="_blank" href="http://www.minchev.eu">Dimitar Minchev</a> and available for download from <a target="_blank" href="https://github.com/dimitarminchev/spoj0/">GitHub</a>, more information <a target="_blank" href="http://www.minchev.eu/spoj-update/">here</a>. ');
 UNLOCK TABLES;
 
 -- 
