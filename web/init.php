@@ -23,6 +23,9 @@ $STATUS_RE = 're'; // runtime error
 // Google ReCaptcha Api key
 $RECAPTCHA_KEY = "6LcaAtwqAAAAAJnqBrJjTL2zvf310yapBvb1lx18";
 
+// Set Default Timezone
+date_default_timezone_set('Europe/Sofia');
+
 /* MySQL */
 // Creditentials
 $servername = "localhost";
